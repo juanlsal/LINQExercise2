@@ -83,7 +83,12 @@ namespace LinqExercise
             Console.WriteLine(sumYOE.Sum(x => x.YearsOfExperience));
             Console.WriteLine(sumYOE.Average(x => x.YearsOfExperience));
             //TODO: Add an employee to the end of the list without using employees.Add()
+            employees = employees.Append(new Employee("Juan", "Salamanca", 22, 0)).ToList();
 
+            foreach( var employee in employees )
+            {
+                Console.WriteLine(employee.FullName);
+            }
 
             Console.WriteLine();
 
